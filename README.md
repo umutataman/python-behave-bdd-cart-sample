@@ -18,7 +18,7 @@ pip install requirements.txt
 ######Running Project 
 
 1. Running test without configuaration, simply send **behave** on terminal
-2. To run responsive test; width and height parameters(in pixel) must be added.
+2. To run responsive test; width and height parameters(in pixel) must be added. Default value is 1920x1080
 ```
 behave -D width=1920 -D height=1080
 behave -D width=414 -D height=736
