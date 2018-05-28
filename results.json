@@ -1,0 +1,19 @@
+Feature: Challange gittigidiyor # features/cart.feature:1
+
+  Scenario: Cart cases                                           # features/cart.feature:3
+    Given I go to website "https://www.gittigidiyor.com"         # features/steps/cart.py:7
+    When I search for "televizyon"                               # features/steps/cart.py:12
+    And I click page "2" and item "5"                            # features/steps/cart.py:26
+    And I save price for "televizyon"                            # features/steps/cart.py:44
+    And I click "Sepete Ekle" id "add-to-basket" without Fixpack # features/steps/cart.py:53
+    Then I confirm television_price equals to cart_price         # features/steps/cart.py:64
+    Given I go to website "https://www.gittigidiyor.com"         # features/steps/cart.py:7
+    When I search for "iphone"                                   # features/steps/cart.py:12
+    And I click page "1" and item "5"                            # features/steps/cart.py:26
+    And I save price for "iphone"                                # features/steps/cart.py:44
+    And I click "Sepete Ekle" id "add-to-basket" without Fixpack # features/steps/cart.py:53
+    Then I confirm total_price equals to tv plus iphone          # features/steps/cart.py:72
+    When I delete "televizyon"                                   # features/steps/cart.py:80
+    Then I confirm total_price equals to iphone                  # features/steps/cart.py:96
+    When I clear Shopping Cart                                   # features/steps/cart.py:103
+
