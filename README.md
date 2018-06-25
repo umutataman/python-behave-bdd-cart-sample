@@ -1,4 +1,4 @@
-# Pyhon-Behave, Selenium, Bdd Sample
+# Pyhon-Behave, Selenium, BDD Sample
 ####Author
 Umut Ataman - umutataman@gmail.com
 ####Tools and Frameworks
