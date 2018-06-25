@@ -1,11 +1,11 @@
 # Pyhon-Behave, Selenium, BDD Sample
-####Author
+### Author
 Umut Ataman - umutataman@gmail.com
-####Tools and Frameworks
+### Tools and Frameworks
 [PyCharm](https://www.jetbrains.com/pycharm/), [Selenium Webdriver](https://www.seleniumhq.org/projects/webdriver/), [Python 3.6](https://www.python.org/), [Behave](https://behave.readthedocs.io/en/latest/)
 
 ## Requirements and Running Project
-######Requirements
+### Requirements
 Please follow steps in order for running the project without an issue
 
 1. pip must be upgraded and virtual env must be created. More details;
@@ -15,7 +15,7 @@ Please follow steps in order for running the project without an issue
 pip install requirements.txt
 ```
 
-######Running Project 
+### Running Project 
 
 1. Running test without configuaration, simply send **behave** on terminal
 2. To run responsive test; width and height parameters(in pixel) must be added. Default value is 1920x1080
