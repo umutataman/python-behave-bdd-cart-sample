@@ -7,9 +7,10 @@ def before_all(context):
     context.screen_height = int(context.config.userdata.get("height"))
 
 def before_feature(context, feature):
+    print("Before feature\n")
     context.browser = webdriver.Chrome()
     context.browser.set_window_size(context.screen_width, context.screen_height)
-    print("Before feature\n")
+    
 
 def before_scenario(context,scenario):
     print("Before scenario\n")
