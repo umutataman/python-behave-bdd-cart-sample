@@ -16,6 +16,7 @@ def before_scenario(context,scenario):
     print("Before scenario\n")
 
 def after_scenario(context,scenario):
+    print("after scenario")
     print("scenario status" + scenario.status)
     if scenario.status == "failed":
         if not os.path.exists("failed_scenarios_screenshots"):
