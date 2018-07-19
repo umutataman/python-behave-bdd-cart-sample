@@ -1,4 +1,5 @@
 from selenium import webdriver
+import os
 
 def before_all(context):
     print("Executing before all")
