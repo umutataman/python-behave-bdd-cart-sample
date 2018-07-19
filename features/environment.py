@@ -18,12 +18,12 @@ def before_scenario(context,scenario):
 
 def after_scenario(context,scenario):
     print("after scenario")
-    print("scenario status" + scenario.status)
-    if scenario.status == "failed":
+    print("scenario status" + str(scenario.status))
+    if str(scenario.status) == "failed":
         if not os.path.exists("failed_scenarios_screenshots"):
             os.makedirs("failed_scenarios_screenshots")
         os.chdir("failed_scenarios_screenshots")
-        context.browser.save_screenshot(scenario.name + "_failed.png")
+        context.browser.save_screenshot(str(scenario.name) + "_failed.png")
     context.browser.quit()
 
 def after_feature(context,feature):
