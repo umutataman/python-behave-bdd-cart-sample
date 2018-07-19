@@ -16,10 +16,15 @@ def before_scenario(context,scenario):
     print("Before scenario\n")
 
 def after_scenario(context,scenario):
-    print("After scenario\n")
+    print("scenario status" + scenario.status)
+    if scenario.status == "failed":
+        if not os.path.exists("failed_scenarios_screenshots"):
+            os.makedirs("failed_scenarios_screenshots")
+        os.chdir("failed_scenarios_screenshots")
+        context.browser.save_screenshot(scenario.name + "_failed.png")
+    context.browser.quit()
 
 def after_feature(context,feature):
-    context.browser.quit()
     print("After feature\n")
 
 def after_all(context):
