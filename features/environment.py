@@ -15,6 +15,9 @@ def before_feature(context, feature):
 
 def before_scenario(context,scenario):
     print("Before scenario\n")
+    value_int = 1
+    if value_int == 1:
+        print("1")
 
 def after_scenario(context,scenario):
     print("after scenario")
